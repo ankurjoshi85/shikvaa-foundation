@@ -1,0 +1,353 @@
+Build Production-Ready NGO Website (Frontend Only, Backend Ready)
+
+Role & Expectation:
+Act as a 20+ years experienced Senior Full Stack Architect & UI/UX Engineer.
+Build a production-ready, frontend-only website for an NGO named Shikvaa Foundation, using scalable architecture so backend can be added later without refactoring UI logic.
+
+🧠 Tech Stack (Strictly Follow)
+
+Framework: Next.js (Latest) – App Router
+
+Language: TypeScript
+
+Styling: Tailwind CSS
+
+Icons: Lucide React
+
+Animations: Framer Motion (minimal, smooth)
+
+Forms (Email): EmailJS (free tier) or Formspree free tier
+
+SEO: Next.js Metadata API
+
+Hosting: Vercel (production ready)
+
+State Management (future-ready): Zustand (lightweight)
+
+Linting: ESLint + Prettier
+
+Images: Next.js <Image /> optimized
+
+🎨 Design System & Branding
+
+Theme:
+
+Dark Navy Blue + Gold accents (match logo theme)
+
+White background sections for readability
+
+Minimal animations
+
+Smooth scrolling
+
+No heavy sliders
+
+NGO professional modern style
+
+Fonts:
+
+Headings: Cinzel or Playfair Display
+
+Body: Poppins or Montserrat
+
+UI Guidelines:
+
+Sticky header with CTA buttons: Donate & Partner With Us
+
+Light / Dark mode toggle (persist user preference)
+
+Mobile-first responsive design
+
+WCAG accessibility compliant
+
+Lighthouse performance target 90+
+
+Clear typography hierarchy
+
+Subtle hover effects
+
+No flashy components
+
+🌍 Website Pages & Content Structure
+1️⃣ Home (Landing Page)
+
+Hero Section
+
+Title: “Cyber Setu AI+ – Securing Digital Lives”
+
+Subtitle: Protecting communities through digital safety, education & skills
+
+Primary CTA: Partner With Us
+
+Secondary CTA: Request Workshop
+
+Sections:
+
+About Shikvaa Foundation (short intro)
+
+Focus Areas:
+
+Education
+
+Skills
+
+Digital Safety
+
+Women & Child Welfare
+
+Flagship Program Highlight: Cyber Setu AI+
+
+Impact Vision (use small realistic placeholder numbers)
+
+Call to Action
+
+Footer:
+
+Email
+
+Phone
+
+CIN
+
+Social links
+
+2️⃣ About Us
+
+Include:
+
+Vision
+
+Mission
+
+Why Shikvaa Foundation
+
+Founder Message (use placeholder name: XYZ)
+
+Legal Status: Section 8 Company
+
+CIN: U85500DL2026NPL462553
+
+Registration Year: 2026
+
+Trust-based tone (not emotional marketing)
+
+3️⃣ Our Programs
+
+Cards with individual sections:
+
+Cyber Setu AI+
+
+Education Initiatives
+
+Skill Development
+
+Women & Child Empowerment
+
+Each program:
+
+Short description
+
+“Download brochure” placeholder button (PDF later)
+
+“Know more” CTA
+
+4️⃣ Cyber Setu AI+ (Dedicated Flagship Page)
+
+Include:
+
+What is Cyber Setu AI+
+
+Who we serve
+
+Why it matters
+
+Workshop format
+
+Beneficiary groups
+
+Partner with us CTA
+
+Request Workshop form
+
+Clean layout, strong trust signals
+
+5️⃣ Get Involved
+
+Sections:
+
+Partner With Us
+
+CSR Collaboration
+
+Volunteer
+
+Internship
+
+Request Workshop
+
+Form handling:
+
+Use EmailJS or Formspree free tier
+
+Form fields:
+
+Name
+
+Email
+
+Phone
+
+Organization
+
+Message
+
+Success & Error UI states
+
+6️⃣ Gallery / Media
+
+Event photos (use free stock images as placeholder)
+
+Workshop highlights
+
+Certificates (placeholder)
+
+Press mentions (future ready)
+
+Grid layout with modal preview
+
+7️⃣ Contact Us
+
+Include:
+
+Phone: 123456789
+
+Email: shikvaa.foundation@gmail.com
+
+Address: Plot No. 27-A FF Subhash Park Ext. Uttam Nagar, West Delhi 110059
+
+Google Map embed
+
+Contact Form (EmailJS/Formspree)
+
+🌐 Multilingual Support
+
+English + Hindi toggle
+
+Store language preference in localStorage
+
+Text content structured using JSON dictionary files for i18n
+
+🔍 SEO & Trust Signals (Mandatory)
+
+SEO metadata for all pages
+
+OpenGraph for WhatsApp previews
+
+Structured NGO schema
+
+Sitemap.xml generation
+
+Robots.txt
+
+Optimized images
+
+Canonical URLs
+
+Semantic HTML
+
+🧱 Folder Structure
+src/
+  app/
+    page.tsx (Home)
+    about/
+    programs/
+    cyber-setu-ai/
+    get-involved/
+    gallery/
+    contact/
+  components/
+  sections/
+  lib/
+  hooks/
+  data/
+  styles/
+  i18n/
+public/
+🔐 Security & Best Practices
+
+No secrets in frontend
+
+Prepare .env.local structure for future backend keys
+
+Form spam protection (basic honeypot)
+
+Rate-limit form submissions client-side
+
+Sanitize user input
+
+🧩 Backend-Ready Architecture
+
+API layer abstraction folder: /lib/api
+
+All forms call mock services now
+
+Future REST API or Spring Boot backend integration-ready
+
+Modular services for:
+
+Auth
+
+Donations
+
+CMS
+
+Gallery
+
+Admin Dashboard
+
+🚀 Deployment
+
+Production-ready build for Vercel
+
+README.md with:
+
+Local setup
+
+Build steps
+
+Deployment steps
+
+Environment variables guide
+
+📌 Peer Website Reference
+
+Use UX inspiration from:
+https://www.satyashaktifoundation.org/
+
+Do NOT copy UI directly.
+Follow modern design patterns.
+
+🧪 Quality Bar
+
+Clean reusable components
+
+No console errors
+
+Fully responsive
+
+Accessible
+
+SEO-ready
+
+Performance optimized
+
+Production-grade code
+
+🧠 Final Output Expectation
+
+Deliver:
+✔ Fully working Next.js frontend
+✔ Pixel-perfect UI
+✔ Ready for backend plug-in
+✔ Production-ready deployable app
+✔ Clean readable code
