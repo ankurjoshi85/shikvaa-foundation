@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
 
 const images = [
   // Using generic high-quality unsplash images related to education/tech/community
@@ -12,12 +13,13 @@ const images = [
 ];
 
 export default function Gallery() {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background pb-20">
       <div className="bg-primary py-20 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-6">Our Impact in Action</h1>
+        <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-6">{t("gallery.title")}</h1>
         <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-          Glimpses from our recent workshops, community drives, and educational events.
+          {t("gallery.subtitle")}
         </p>
       </div>
 

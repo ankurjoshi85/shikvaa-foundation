@@ -1,15 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
 import { Target, Eye, FileText, CheckCircle2 } from "lucide-react";
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full bg-background">
       {/* Header */}
       <div className="bg-primary py-24 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-6">About Shikvaa Foundation</h1>
+        <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-foreground mb-6">{t("about.title")}</h1>
         <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-          Driving sustainable social change through technology, education, and empowerment.
+          {t("about.subtitle")}
         </p>
       </div>
 
@@ -30,9 +32,9 @@ export default function About() {
               <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center mb-6">
                 <Target className="h-6 w-6 text-primary-foreground" />
               </div>
-              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">Our Mission</h2>
+              <h2 className="text-3xl font-serif font-bold text-foreground mb-4">{t("about.mission_title")}</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To bridge societal gaps by leveraging modern technology, providing quality education, and enabling skill development. We strive to create equal opportunities for the underprivileged, ensuring no one is left behind in the digital age.
+                {t("about.mission_desc")}
               </p>
             </div>
           </motion.div>
@@ -51,9 +53,9 @@ export default function About() {
               <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center mb-6">
                 <Eye className="h-6 w-6 text-accent-foreground" />
               </div>
-              <h2 className="text-3xl font-serif font-bold mb-4">Our Vision</h2>
+              <h2 className="text-3xl font-serif font-bold mb-4">{t("about.vision_title")}</h2>
               <p className="text-primary-foreground/90 text-lg leading-relaxed">
-                A world where every individual, regardless of their socio-economic background, has the knowledge, skills, and resources to thrive, contribute meaningfully to society, and lead a dignified life.
+                {t("about.vision_desc")}
               </p>
             </div>
           </motion.div>
@@ -67,14 +69,14 @@ export default function About() {
             </div>
           </div>
           <div className="lg:w-2/3 space-y-6">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">Legal Status & Transparency</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">{t("about.legal_title")}</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Shikvaa Foundation operates with complete transparency and adherence to statutory regulations. We are officially registered under the Companies Act, 2013, solidifying our commitment to structured, impactful, and accountable non-profit operations.
+              {t("about.legal_desc")}
             </p>
             <div className="bg-secondary p-6 rounded-xl border border-border/50 inline-block">
               <div className="flex items-center gap-3 text-foreground font-medium text-lg">
                 <CheckCircle2 className="text-green-600 h-6 w-6" />
-                Registered Section 8 NGO
+                {t("about.legal_badge")}
               </div>
               <div className="mt-2 text-muted-foreground font-mono text-sm">
                 CIN: U85500DL2026NPL462553
@@ -85,10 +87,10 @@ export default function About() {
 
         {/* Founder's Message */}
         <section className="text-center max-w-4xl mx-auto pb-12">
-          <h2 className="text-4xl font-serif font-bold text-foreground mb-10">Message from the Founders</h2>
+          <h2 className="text-4xl font-serif font-bold text-foreground mb-10">{t("about.founder_title")}</h2>
           <blockquote className="text-2xl font-serif italic text-muted-foreground leading-relaxed relative">
             <span className="absolute -top-10 -left-6 text-7xl text-accent/20">"</span>
-            We started Shikvaa Foundation not just as an organization, but as a movement. A movement to ensure that the rapid advancements in technology and education reach the grassroots of our nation. Cyber Setu AI+ is our first major step towards ensuring digital safety and literacy for all.
+            {t("about.founder_msg")}
             <span className="absolute -bottom-10 -right-6 text-7xl text-accent/20">"</span>
           </blockquote>
           <div className="mt-10">

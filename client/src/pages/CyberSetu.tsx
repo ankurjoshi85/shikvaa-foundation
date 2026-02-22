@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
 import { ShieldCheck, Cpu, Network, Lightbulb, Users, CheckCircle } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 
 export default function CyberSetu() {
+  const { t } = useTranslation();
   return (
     <div className="bg-background min-h-screen">
       {/* Hero */}
@@ -14,13 +16,11 @@ export default function CyberSetu() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent font-semibold mb-6">
-              <Cpu className="h-4 w-4" /> Flagship Program
+              <Cpu className="h-4 w-4" /> {t("cybersetu.flagship")}
             </div>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">Cyber Setu AI+</h1>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">{t("cybersetu.title")}</h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Bridging the gap between technological advancement and user awareness. 
-              Equipping schools, rural communities, and institutions with the tools 
-              to navigate AI and Cybersecurity safely.
+              {t("cybersetu.subtitle")}
             </p>
           </div>
         </div>
@@ -31,9 +31,9 @@ export default function CyberSetu() {
         {/* Features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           {[
-            { icon: ShieldCheck, title: "Cyber Safety", desc: "Protecting personal data, identifying phishing, and safe browsing habits." },
-            { icon: Lightbulb, title: "AI Literacy", desc: "Understanding artificial intelligence, its impact, and ethical usage." },
-            { icon: Users, title: "Community Workshops", desc: "Interactive sessions tailored for students, teachers, and parents." }
+            { icon: ShieldCheck, title: t("cybersetu.feature1_title"), desc: t("cybersetu.feature1_desc") },
+            { icon: Lightbulb, title: t("cybersetu.feature2_title"), desc: t("cybersetu.feature2_desc") },
+            { icon: Users, title: t("cybersetu.feature3_title"), desc: t("cybersetu.feature3_desc") }
           ].map((feat, i) => (
             <motion.div 
               key={i}
@@ -55,26 +55,26 @@ export default function CyberSetu() {
         {/* Two Column Layout: Details + Form */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
-            <h2 className="text-4xl font-serif font-bold text-foreground">Why Cyber Setu AI+?</h2>
+            <h2 className="text-4xl font-serif font-bold text-foreground">{t("cybersetu.why_title")}</h2>
             <div className="prose prose-lg dark:prose-invert text-muted-foreground">
               <p>
-                As digital transformation accelerates across India, exposure to the internet is increasing exponentially. However, digital literacy is not keeping pace, leading to rising cases of cyber fraud, misinformation, and unsafe online practices.
+                {t("cybersetu.why_desc")}
               </p>
               <p>
-                <strong>Cyber Setu AI+</strong> (Cyber Bridge) acts as a conduit of knowledge. We aim to:
+                <strong>{t("cybersetu.title")}</strong> {t("cybersetu.why_desc2")}
               </p>
               <ul className="space-y-3 mt-6 list-none pl-0">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
-                  <span>Demystify complex AI concepts for the general public.</span>
+                  <span>{t("cybersetu.point1")}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
-                  <span>Provide actionable cybersecurity protocols for schools and small businesses.</span>
+                  <span>{t("cybersetu.point2")}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
-                  <span>Train educators to become 'Cyber Ambassadors' in their communities.</span>
+                  <span>{t("cybersetu.point3")}</span>
                 </li>
               </ul>
             </div>
@@ -83,10 +83,10 @@ export default function CyberSetu() {
           <div className="sticky top-28">
             <ContactForm 
               type="workshop" 
-              title="Request a Workshop" 
+              title={t("btn.request_workshop")} 
             />
             <p className="text-sm text-center text-muted-foreground mt-4">
-              Workshops are typically provided free of cost to public schools and underprivileged communities.
+              {t("cybersetu.workshop_note")}
             </p>
           </div>
         </div>

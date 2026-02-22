@@ -32,7 +32,7 @@ export default function Home() {
             className="max-w-3xl space-y-8"
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-accent/20 border border-accent/30 text-accent font-medium text-sm tracking-wide">
-              Registered Section 8 NGO
+              {t("home.badge")}
             </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
               {t("hero.title")}
@@ -45,7 +45,7 @@ export default function Home() {
                 <Link href="/programs">{t("hero.cta")}</Link>
               </Button>
               <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-xl border-white/30 text-white hover:bg-white hover:text-black transition-all bg-transparent" asChild>
-                <Link href="/about">Learn More</Link>
+                <Link href="/about">{t("btn.learn_more")}</Link>
               </Button>
             </div>
           </motion.div>
@@ -69,8 +69,8 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-8">
-                <h3 className="text-3xl font-serif font-bold text-white mb-2">Cyber Setu AI+</h3>
-                <p className="text-slate-200">Our flagship digital literacy initiative.</p>
+                <h3 className="text-3xl font-serif font-bold text-white mb-2">{t("nav.cybersetu")}</h3>
+                <p className="text-slate-200">{t("cybersetu.flagship")}</p>
               </div>
             </motion.div>
 
@@ -81,28 +81,28 @@ export default function Home() {
               className="space-y-6"
             >
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground">
-                Bridging the <span className="gold-gradient-text">Digital Divide</span>
+                {t("home.cyber_setu_title")}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                In today's rapidly evolving technological landscape, AI awareness and cyber safety are no longer luxuries—they are necessities. Our flagship program, <strong>Cyber Setu AI+</strong>, is designed to empower students, educators, and communities with the knowledge to navigate the digital world safely and effectively.
+                {t("home.cyber_setu_desc")}
               </p>
               <ul className="space-y-4 pb-4">
                 <li className="flex items-center gap-3 text-foreground">
                   <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <Shield className="h-4 w-4 text-primary" />
                   </div>
-                  <span>Cybersecurity Awareness Workshops</span>
+                  <span>{t("home.cyber_setu_feature1")}</span>
                 </li>
                 <li className="flex items-center gap-3 text-foreground">
                   <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <BookOpen className="h-4 w-4 text-primary" />
                   </div>
-                  <span>AI Literacy for Schools & Rural Areas</span>
+                  <span>{t("home.cyber_setu_feature2")}</span>
                 </li>
               </ul>
               <Button className="group bg-primary" asChild>
                 <Link href="/cybersetu">
-                  Explore Cyber Setu <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  {t("nav.cybersetu")} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
             </motion.div>
@@ -114,18 +114,19 @@ export default function Home() {
       <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-serif font-bold text-foreground mb-6">Our Core Pillars</h2>
+            <h2 className="text-4xl font-serif font-bold text-foreground mb-6">{t("home.pillars_title")}</h2>
             <p className="text-lg text-muted-foreground">
-              We focus on comprehensive development through strategic interventions in key areas of society.
+              {t("home.pillars_subtitle")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: BookOpen, title: "Education", desc: "Providing access to quality learning materials and digital infrastructure for underprivileged students." },
-              { icon: Users, title: "Skill Development", desc: "Equipping youth with modern, employable skills tailored to industry demands." },
-              { icon: HeartHandshake, title: "Women & Child Welfare", desc: "Creating safe spaces and empowerment programs to foster independence and well-being." },
+              { icon: BookOpen, title: t("pillar.education_title"), desc: t("pillar.education_desc") },
+              { icon: Users, title: t("pillar.skills_title"), desc: t("pillar.skills_desc") },
+              { icon: HeartHandshake, title: t("pillar.welfare_title"), desc: t("pillar.welfare_desc") },
             ].map((pillar, i) => (
+
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

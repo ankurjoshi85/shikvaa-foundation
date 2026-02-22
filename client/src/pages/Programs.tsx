@@ -1,51 +1,54 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/lib/i18n";
 import { Shield, BookOpen, Briefcase, Heart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const programs = [
-  {
-    id: "cybersetu",
-    title: "Cyber Setu AI+",
-    icon: Shield,
-    color: "bg-blue-500",
-    desc: "Empowering individuals with AI awareness and robust cybersecurity practices to safely navigate the modern digital landscape. We conduct specialized workshops in schools and rural communities.",
-    link: "/cybersetu"
-  },
-  {
-    id: "education",
-    title: "Education For All",
-    icon: BookOpen,
-    color: "bg-emerald-500",
-    desc: "Distributing learning materials, establishing community libraries, and providing scholarships to ensure financial constraints never hinder a child's right to quality education.",
-    link: "#"
-  },
-  {
-    id: "skills",
-    title: "Skill Development",
-    icon: Briefcase,
-    color: "bg-orange-500",
-    desc: "Vocational training programs tailored for the youth, focusing on both traditional crafts and modern digital skills to enhance employability and foster entrepreneurship.",
-    link: "#"
-  },
-  {
-    id: "welfare",
-    title: "Women & Child Welfare",
-    icon: Heart,
-    color: "bg-rose-500",
-    desc: "Creating safe ecosystems through legal awareness, health camps, and empowerment initiatives aimed at uplifting women and protecting children's rights.",
-    link: "#"
-  }
-];
-
 export default function Programs() {
+  const { t } = useTranslation();
+
+  const programs = [
+    {
+      id: "cybersetu",
+      title: "Cyber Setu AI+",
+      icon: Shield,
+      color: "bg-blue-500",
+      desc: t("prog.cybersetu_desc"),
+      link: "/cybersetu"
+    },
+    {
+      id: "education",
+      title: t("pillar.education_title"),
+      icon: BookOpen,
+      color: "bg-emerald-500",
+      desc: t("prog.education_desc"),
+      link: "#"
+    },
+    {
+      id: "skills",
+      title: t("pillar.skills_title"),
+      icon: Briefcase,
+      color: "bg-orange-500",
+      desc: t("prog.skills_desc"),
+      link: "#"
+    },
+    {
+      id: "welfare",
+      title: t("pillar.welfare_title"),
+      icon: Heart,
+      color: "bg-rose-500",
+      desc: t("prog.welfare_desc"),
+      link: "#"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <div className="bg-secondary py-20 text-center px-4 border-b border-border">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">Our Programs</h1>
+        <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">{t("programs.title")}</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Targeted initiatives designed to address the most pressing challenges in our society today.
+          {t("programs.subtitle")}
         </p>
       </div>
 
@@ -70,7 +73,7 @@ export default function Programs() {
               {prog.link !== "#" && (
                 <Button variant="outline" className="w-fit group border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
                   <Link href={prog.link}>
-                    Explore Program <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    {t("btn.explore_program")} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
               )}
